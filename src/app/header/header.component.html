@@ -1,0 +1,13 @@
+<div>
+<div class="header-container">
+    <figure>
+    <figcaption> <b>{{title}}</b>
+    <img src={{clogo}} [height]="h" [width]="w" />
+</figcaption>
+    </figure>
+</div>
+<div style="text-align: center; background-color: red; color:white;">
+<input type="radio" name="changeTheme" (click) = "setTheme('S')"/> Summer
+<input type="radio" name="changeTheme" (click) = "setTheme('W')"/> Winter 
+</div>
+</div>

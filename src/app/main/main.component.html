@@ -1,0 +1,33 @@
+<div style="text-align: center; margin-top: 10px;">
+   <div class="container">
+   <div class="row"> 
+      <div class="col" style="text-align: right;">Existing Customer</div>
+      <div class="col" style="text-align: left;"><input type="checkbox" name="existing"
+      [(ngModel)] = "isExisting"
+         />
+      </div>
+      <hr/>
+      <div *ngIf ="isExisting then showMember else showCustomer">
+      </div>
+      <ng-template #showCustomer>
+         <label>Customer Name: </label> 
+         <input type="text" name="custname" [(ngModel)]="cname"/>
+         <label>Table Number</label>
+         <input type="text" name="custtable" [(ngModel)]="table"/>
+      </ng-template>
+      <ng-template #showMember >
+         <label>Membership#</label>
+         <input type="text" name="Membership" [(ngModel)]="mnumber" />
+         <label>Table Number</label>
+         <input type="text" name="custtable" [(ngModel)]="table"/>
+      </ng-template>
+   </div>
+   </div>
+   
+   <p>
+      Customer {{cname}} has placed the order on table number {{table}}
+   </p>
+  
+</div>
+<h2 style="text-align: center;">Select Menu</h2>
+<app-menu></app-menu>

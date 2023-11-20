@@ -1,0 +1,22 @@
+<div clas="container">
+    <div class="row" style="text-align: center; background-color: brown;color: white;">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <input type="radio" name="menu" value="breakfast" 
+            (click)="setMenu('B')" checked
+            /> Breakfast Menu &nbsp;&nbsp;
+            <input type="radio" name="menu" value="lunch"
+            (click)="setMenu('L')" /> Lunch Menu <br/>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <ul class="list-group">
+                <li *ngFor="let mitem of menu" class="list-group-item"> {{mitem}}</li>
+            </ul>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+</div>
